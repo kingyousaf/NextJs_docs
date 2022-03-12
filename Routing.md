@@ -28,9 +28,9 @@ So /person/details
 
 ## Dynamic routing
 
-Routes made dynamic will have diffrent urls depending on information passed to them.
+Routes made dynamic will have diffrent url's depending on information passed to them.
 
-These will not be hard coded but chnage depending on diffrent variables.
+These will not be hard coded but change depending on diffrent variables.
 
 ## creating dynamic routes
 
@@ -38,15 +38,16 @@ To create a dynamic route you need to have a specific file name structure
 
 wrap the page you want to be dynamic in brackets
 
+```
 []
-
+```
 Then put the name of the page in the brackets
 
 ```bash
 [person].tsx
 ```
 
-also work for folders as well
+This also work for folders as well
 
 ```bash
 [car]/[person].tsx
