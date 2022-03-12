@@ -139,7 +139,24 @@ const people = [
 
 ```
 
-You donr ned to map what you could do is simply retieve the information and in the as="" string
+You dont't need to map what you could do is simply retieve the information and in the as="" string
 iterplate it and add the values you want
 
 But make sure that in the href you keep the correct template of the page you want to go to.
+
+
+# Upadted version
+
+## Now the files are case sensitive
+
+So make sure when routing you have correct case
+
+## Dynamic linking
+
+Now you no longer need to have an as="" in the link tag.
+
+```
+<Link href="brazil/bruno"> Naviagte </Link>
+
+Now if you dontt add as there still wont be a full page refresh
+```
