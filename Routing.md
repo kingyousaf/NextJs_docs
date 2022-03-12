@@ -158,5 +158,17 @@ Now you no longer need to have an as="" in the link tag.
 ```
 <Link href="brazil/bruno"> Naviagte </Link>
 
-Now if you dontt add as there still wont be a full page refresh
 ```
+Now if you dontt add as there still wont be a full page refresh
+
+## Now you can ignore certain pages based on settings
+
+if you have tests that dont want to become routes you cannow ignore pages based on some settings defined by you
+
+in you next.config.js you can add a file naming structure to pick up thos pages and make them pages
+
+in the mmodule export add 
+```
+pageExtenshions: ["page.tsx"]
+```
+so you can put anything in there and if you add that to the end of a file then it will become a route
