@@ -168,4 +168,27 @@ will take care of all these use cases for us.
 
 we wrap the file like ```products1``` in [] braces and rename it to
 
-```[productNumber]```
+```[productNumber].js```
+
+Now if we visit ```/product/anythingAfter``` we will just get the ```[productNumber].js``` page
+
+Now we can use this page to chnage its content depedning on which product we are on 
+
+### Accessing the dynamic value
+
+to access the ```anythingAfter``` value we use the ```useRouter``` Hook given to us by Next Js.
+
+With this we can retieve the ```query``` which is the dynamic part of the url
+
+```
+import { useRouter } from 'next/router'
+import React from 'react'
+
+const ProductNumber = () => {
+  const router = useRouter()
+  console.log(router.query.ProductNumber);
+  return <div>ProductNumber</div>;
+}
+
+export default ProductNumber;
+```
