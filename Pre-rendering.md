@@ -4,7 +4,7 @@
 - [Static Generation](#Static-Generation)
 - [Static Generation with getInitalProps](#Static-Generation-with-getInitalProps)
 - [Pages Vs Components](#Pages-Vs-Components)
-- [Inpecting Static Generation Builds]()
+- [Inpecting Static Generation Builds](#Inpecting-Static-Generation-Builds)
 
 
 # Pre-rendering
