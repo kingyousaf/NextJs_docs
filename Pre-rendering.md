@@ -1,9 +1,6 @@
 # summary
 
 - [Pre-rendering](#Pre-rendering)
-  - [What is prendering](#What is prendering ?)
-  - [benerfits](#benerfits of using pre-rendering)
-  - [comparing REACT AND NEXTJS](#comparing REACT AND NEXTJS)
 
 
 # Pre-rendering
