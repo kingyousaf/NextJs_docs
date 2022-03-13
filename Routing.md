@@ -1,14 +1,14 @@
 
 # summary of content 
 
-- [Pages folder](https://github.com/kingyousaf/next_mastary_docs/blob/main/Routing.md#video-3---project-structure)
-- [Nested Routes](https://github.com/kingyousaf/next_mastary_docs/blob/main/Routing.md#video-6---nested-routes)
-- [Dynamic Routes](https://github.com/kingyousaf/next_mastary_docs/blob/main/Routing.md#video-7---dynamic-routes)
-- [Nested dyanmic routes](https://github.com/kingyousaf/next_mastary_docs/blob/main/Routing.md#video-8---nested-dynamic-routes)
-- [Catch all routes](https://github.com/kingyousaf/next_mastary_docs/blob/main/Routing.md#video-9---catch-all-routes)
-- [Link Component](https://github.com/kingyousaf/next_mastary_docs/blob/main/Routing.md#video-10---link-component-navigation)
-- [Navigating Users](https://github.com/kingyousaf/next_mastary_docs/blob/main/Routing.md#video-11---navigating-programmatically)
-- [custom 404 page](https://github.com/kingyousaf/next_mastary_docs/blob/main/Routing.md#video-12---custom-404-page)
+- [Pages folder](#video-3---project-structure)
+- [Nested Routes](#video-6---nested-routes)
+- [Dynamic Routes](#video-7---dynamic-routes)
+- [Nested dyanmic routes](#video-8---nested-dynamic-routes)
+- [Catch all routes](#video-9---catch-all-routes)
+- [Link Component](#video-10---link-component-navigation)
+- [Navigating Users](#video-11---navigating-programmatically)
+- [custom 404 page](#video-12---custom-404-page)
 
 
 # video 3 - Project Structure
