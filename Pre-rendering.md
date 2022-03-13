@@ -102,6 +102,6 @@ export async function getStaticProps() {
 
 ### Return
 - When returning you need to follow the convention of returning an object
-- Then insid eof props define as many things you want to return as a prop to the page
+- Then inside of the  props define as many things you want to return as a prop to the page
 - Then accept this as props by the page itself 
 
