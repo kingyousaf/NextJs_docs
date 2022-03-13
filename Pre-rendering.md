@@ -6,7 +6,7 @@
 - [Pages Vs Components](#Pages-Vs-Components)
 - [Inpecting Static Generation Builds](#Inpecting-Static-Generation-Builds)
 - [SSG with Dynamic Parameters](#SSG-with-Dynamic-Parameters)
-- [Mater detail Pattern](#Mater-detail-Pattern)
+- [Master detail Pattern](#Master-detail-Pattern)
 
 
 # Pre-rendering
@@ -246,7 +246,7 @@ export async function getStaticPaths() {
 
 ```
 
-# Mater detail Pattern
+# Master detail Pattern
 
 ## What is the Mater detail Pattern?
 - It is pattern followed in the UI
