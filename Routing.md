@@ -64,3 +64,37 @@ We also get files like
 - Next.config.js - This is the settings of your application
 - .eslintrc.json - To spot wrong code
 
+## video 4 - Routing Section Intro
+
+In regular REACT you are not given a routing system so many people download external packages to do the work for them like 
+REACT Router
+
+#### What is a routing system ?
+
+The ability to go to diffrent pages
+
+### Routing in NEXT Js
+
+It is all handled for us through the Folder Pages
+
+## video 5 - Routing with Pages Folder
+
+In Next Js if you create a file in the Pages folder then it will become a route that you can visit
+
+##### For Example:
+
+If we create a file named details.js in the pages folder then visit [localhost:3000/details](http://localhost:3000/details) It will be 
+its own page
+
+pages/details.js
+```bash
+import React from 'react'
+
+const details = () => {
+  return (
+    <div>details</div>
+  )
+}
+
+export default details
+```
