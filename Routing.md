@@ -141,3 +141,32 @@ const ProductNumber = () => {
 
 export default ProductNumber;
 ```
+
+
+
+## video 8 - Nested Dynamic Routes
+
+These are routes which are nested in each other
+
+but there values change
+
+for example ```/product/sweater/1``` and ```/product/hat/1``` here the secodn and third params change
+
+to achomplish this 
+- we make folder named ```product``` in pages
+- then another folder named ```[catogry]``` 
+- inside of it ```[productNumber]```
+
+
+### retreiving the values for a nested route
+
+Know that we can make dynamic nested routes we want to retieve the values for each nested route
+
+we could use this to filter or chnage the product or layout fo the page by making api calls
+
+do reteieve the nexted values use 
+
+```
+ const router = useRouter();
+ const { catogry, productNumber } = router.query;
+```
