@@ -52,6 +52,11 @@
  ## What is getInitalProps ?
  - A function made by next js 
  - Will only run if you define it in a page component 
+ - ```Runs only on the server side```
+ - You can directly write ```server side code inside of it``` like things done in ```Nodejs```
+ - Any api keys put inside wont be shown
+ - Any code wrote inside of it will not be shipped to the final bundle
+ - it will run on every request
  
  ## How to use it ?
  - Inside of a page component we ```export a async function called getInitalProps```
