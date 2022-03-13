@@ -4,6 +4,7 @@
 - [Static Generation](#Static-Generation)
 - [Static Generation with getInitalProps](#Static-Generation-with-getInitalProps)
 - [Pages Vs Components](#Pages-Vs-Components)
+- [Inpecting Static Generation Builds]()
 
 
 # Pre-rendering
@@ -120,3 +121,18 @@ export async function getStaticProps() {
 ### Components 
 - Used as re-usable elements in an UI
 - Don't have access to page functions
+
+
+# Inpecting Static Generation Builds
+
+### Building an application
+- Inside of package Json use the command ```build```
+
+- Delete the inital ```.next``` folder 
+
+### Run
+```bash
+yarn build
+```
+- This then creates an ```optimized``` build of out project
+- In the terminal it will show the information about the project
