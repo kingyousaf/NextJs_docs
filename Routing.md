@@ -98,3 +98,31 @@ const details = () => {
 
 export default details
 ```
+#### Rules to follow when creating a page
+- All files must be a exported default for next js to pick them up
+
+### How to create a landing page
+
+#### What is a landing page
+The page that the user will first see when coming to your website
+
+#### Creating a landing page
+
+In the Pages folder we are giving the ``` index.js ``` this is out landing page.
+
+The name index is special as it becomes the route of the folder meaning the first
+
+pages/index.js
+```
+import React from 'react'
+
+const index = () => {
+  return (
+    <div>index</div>
+  )
+}
+
+export default index
+```
+
+Visit [localhost:3000/](http://localhost:3000/)
