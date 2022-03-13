@@ -1,5 +1,5 @@
 
-## video 3 - Project Structure
+# video 3 - Project Structure
 
 ### You will be given some basic folders to start of with lets explain each one
 
@@ -11,7 +11,7 @@ We also get files like
 - Next.config.js - This is the settings of your application
 - .eslintrc.json - To spot wrong code
 
-## video 4 - Routing Section Intro
+# video 4 - Routing Section Intro
 
 In REACT you are not given a routing system so a external packages is downloaded
 
@@ -23,7 +23,7 @@ The ability to go to diffrent pages
 
 Pre-built in with the pages folder
 
-## video 5 - Routing with Pages Folder
+# video 5 - Routing with Pages Folder
 
 In the ```pages``` folder creating a file will make that route available
 
@@ -83,7 +83,7 @@ export default index
 - And simply visit ```localhost:3000/nameOfFile ```
 
 
-## video 6 - Nested Routes
+# video 6 - Nested Routes
 
 ### What is a nested route ?
 
@@ -104,7 +104,7 @@ A route inside of another route like ``` /details/person1 ```
 - This will show when visiting ```/nested```
 
 
-## video 7 - Dynamic Routes
+# video 7 - Dynamic Routes
 
 ### What is a dynamic route?
 
@@ -144,7 +144,7 @@ export default ProductNumber;
 - The we can do multiple stuff like call an api with the params of the url to show specific content etc
 
 
-## video 8 - Nested Dynamic Routes
+# video 8 - Nested Dynamic Routes
 
 ### What is a nested Dynamic Route?
 
@@ -172,7 +172,7 @@ code:
 ```
 From here you can make diffrent api calls or change the content accordingly with the information
 
-## video 9 - Catch All Routes
+# video 9 - Catch All Routes
 
 ### What is a catch all route ?
 
