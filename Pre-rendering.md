@@ -5,6 +5,8 @@
 - [Static Generation with getInitalProps](#Static-Generation-with-getInitalProps)
 - [Pages Vs Components](#Pages-Vs-Components)
 - [Inpecting Static Generation Builds](#Inpecting-Static-Generation-Builds)
+- [SSG with Dynamic Parameters](#SSG-with-Dynamic-Parameters)
+- [Mater detail Pattern](#Mater-detail-Pattern)
 
 
 # Pre-rendering
@@ -136,3 +138,120 @@ yarn build
 ```
 - This then creates an ```optimized``` build of out project
 - In the terminal it will show the information about the project
+
+
+# SSG with Dynamic Parameters
+
+## What is SSG with Dynamic Parameters?
+- When the parameter chnages so you then build a stastic version of the page wirth its new data inside
+- Like the [blog](#Example-structure-of-folder) example
+
+## When to use SSG with Dynamic Parameters
+
+- When you have a list of items and want to show diffrent pages for each dynamic item when clciked
+- When you follow the [master detail pattern](#What-is-the-Mater-detail-Pattern?)
+
+## How to use SSG with Dynamic Parameters 
+
+## Code: 
+```pages/blog/index.js```
+```bash
+import Link from "next/link";
+import React from "react";
+
+const index = ({posts}) => {
+    return (
+      <>
+        <ul>
+          {posts.map((post) => (
+            <li key={post.userId}>
+              <Link href={`/Posts/${post.id}`}>
+                <a>{post.title}</a>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </>
+    );
+};
+
+export default index;
+
+export async function getStaticProps() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const Posts = await res.json();
+  return {
+    props: {
+      posts: Posts.slice(0,3),
+    },
+  };
+}
+
+```
+
+```pages.blog/[postid].js ```
+```bash
+import { useRouter } from "next/router";
+import React from "react";
+
+const PostId = ({ Post }) => {
+  const router = useRouter();
+  return <div>{Post.title} post</div>;
+};
+
+export default PostId;
+
+export async function getStaticProps(ctx) {
+  const { params } = ctx;
+  const res = await fetch(
+    `https://jsonplaceholder.typicode.com/posts/${params.postid}`
+  );
+  const data = await res.json();
+  return {
+    props: {
+      Post: data,
+    },
+  };
+}
+
+export async function getStaticPaths() {
+  return {
+    paths: [
+      {
+        params: {
+          postid: "1",
+        },
+      },
+      {
+        params: {
+          postid: "2",
+        },
+      },
+      {
+        params: {
+          postid: "3",
+        },
+      },
+    ],
+    fallback: false,
+  };
+}
+
+```
+
+# Mater detail Pattern
+
+## What is the Mater detail Pattern?
+- It is pattern followed in the UI
+- In the pattern you have a mater page to show all the content of items
+- Then clicking on a item will take you to a page with that content
+- Like a blog site
+
+### Example structure of folder 
+- Pages have a ```blog``` folder with its ```index.js``` to show all blogs
+- User visits /blog and clicks blog
+- Pages also has a ```[blogId].js``` file in```/blog```
+- wich will show the content of that blog
+- We could pre-render both of these pages
+
+
