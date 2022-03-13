@@ -135,3 +135,11 @@ Now you have the ability to create any route you want in Next Js just
 
 
 ## video 6 - Nested Routes
+
+### What is a nested route ?
+
+A route inside of another route like ``` /details/person1 ```
+
+To make nexted routes we first make a folder and then put files inside of those```pages/folder1/file1```
+
+Then when we visit that page at /folder1/file1 we will be presented with that page.
