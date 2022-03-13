@@ -142,4 +142,10 @@ A route inside of another route like ``` /details/person1 ```
 
 To make nexted routes we first make a folder and then put files inside of those```pages/folder1/file1```
 
-Then when we visit that page at /folder1/file1 we will be presented with that page.
+Then when we visit that page at ```/folder1/file1``` we will be presented with that page.
+
+If you make just a folder called ```pages/blog``` and try to visit /blog youll get an error
+
+To solve this use a index file, mentioned beofre it becomes the route of the folder meaning first
+
+so we get ```pages/blog/index``` then when we visit ```/blog``` we will get the index page
