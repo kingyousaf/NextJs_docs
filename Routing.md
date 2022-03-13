@@ -195,4 +195,51 @@ From here you can make diffrent api calls or change the content accordingly with
  Like ```[[...params]].js```
  
  This will be showed then.
+ 
+ # video 10 - Link Component Navigation
+ 
+ ### What is a Link component 
+ - A compoennt provided by Next js
+ - Used to navaigate between pages
+ - Prevents refresh of the page
+ - Allow users to be dynamicly taken to diffrent pages
 
+ ### How to use a link component
+ code:
+ ```bash
+ import Link from 'next/link'
+ 
+ <Link href="/somewhere">
+     <a>go to blog</a>
+  </Link>
+ ```
+ - Wrapp the item you want to naviagte a person
+ - give it a hard typed route like ```/details``` or 
+ - dynamicly put the route in with string interpealation
+
+ ```bash
+ href={`${details.catogry}/${productNumber}`}
+ ```
+ - These could be taken from an api call or a product thats clicked
+
+ # video 11 - Navigating Programmatically
+ 
+ ### What is Navigating Programmatically?
+ - To make a user chnage his page by him making or a action happening
+
+ ### How to Naviagte Programmatically
+ - Use the ```useRouter``` hook
+ - in some logic that you add example a click run a function
+ - Push the user to a diffrent part of the page
+ ```
+  router.push("/details/completePage")
+ ```
+
+ # video 12 - Custom 404 Page
+
+ ### What is a 404 page ?
+ - A page shown when a user neters an invalide url
+
+ ### How to create a Custom 404 Page
+ - Make a file in ```pages`` called ```404.js```
+ - Its like a simple page so add anything you want insid e of it
