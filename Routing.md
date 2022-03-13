@@ -39,4 +39,7 @@ So we need to follow these steps in order to build a application
 - Open up VsCode
 - Open up an empty folder inside of it 
 - Open up the intergrated terminal
-- Roun the command ```bash yarn create next-app ./ ```
+- Roun the command 
+```bash 
+yarn create next-app ./ 
+```
