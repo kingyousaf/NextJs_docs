@@ -241,5 +241,5 @@ From here you can make diffrent api calls or change the content accordingly with
  - A page shown when a user neters an invalide url
 
  ### How to create a Custom 404 Page
- - Make a file in ```pages`` called ```404.js```
+ - Make a file in ```pages``` called ```404.js```
  - Its like a simple page so add anything you want insid e of it
