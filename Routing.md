@@ -48,3 +48,19 @@ After downloading it run
 yarn dev
 ```
 To run it on a developemnt server over at [localhost:3000](http://localhost:3000/)
+
+### Now you all set up lets get to coding
+
+
+## video 3 - Project Structure
+
+### You will be given some basic folders to start of with lets exaplin each one
+
+- Pages - This is where all your routes will live
+- Public - This is where all assets will live like images etc
+- Styles - This is where all your styles will live like css 
+
+We also get files like 
+- Next.config.js - This is the settings of your application
+- .eslintrc.json - To spot wrong code
+
