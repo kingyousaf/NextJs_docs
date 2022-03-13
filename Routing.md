@@ -13,13 +13,13 @@ and his playlist on [NextJS](https://www.youtube.com/watch?v=GOdu5C8JzL8&list=PL
 
 ### why use Next js
 
-1.) File base routing
-2.) pre-rendering
-3.) Good SEO
-4.) API Routs
-5.) Fullstack framework
-6.) Supports css modules
-7.) provides multiple auth providers
+- File base routing
+- pre-rendering
+- Good SEO
+- API Routs
+- Fullstack framework
+- Supports css modules
+- provides multiple auth providers
 
 
 getting started with NextJs
