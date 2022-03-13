@@ -1,6 +1,7 @@
 # summary
 
 - [Pre-rendering](#Pre-rendering)
+- [Static Generation](#Static Generation)
 
 
 # Pre-rendering
@@ -16,6 +17,7 @@
 - improves performance 
 - ```HTML``` already built and served
 - Good SEO
+- All pages are automaticaly pre-rendered
 
 ## comparing REACT AND NEXTJS
 
@@ -23,3 +25,6 @@
 - REACT the page souce is empty
 - REACT has bad SEO
 - REACT has to get data when on client
+
+
+# Static Generation
