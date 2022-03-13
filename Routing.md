@@ -132,3 +132,6 @@ Now you have the ability to create any route you want in Next Js just
 - name a file how you want in the pages folder ending in ```.js```
 - Make sure its a function that is ```export default ```
 - And simply visit ```localhost:3000/nameOfFile ```
+
+
+## video 6 - Nested Routes
