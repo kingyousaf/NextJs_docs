@@ -66,6 +66,13 @@
  - This will then run at build time and``` hydrate``` the page with data before sending it to the client
  - It will then pass this ```data``` as ```props to the page```
 
+## Extra information 
+- You can use a context wich is passed through the the function
+- This gives you access to the params object
+- The params object allows you to retieve dynamic paths
+- ``` const {params} = context ```
+- You can pull dynamic values like the ```[postid]``` we makde with params.postid
+
  ### code:
  ```bash
  export async function getStaticProps() {
