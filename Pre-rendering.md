@@ -3,6 +3,7 @@
 - [Pre-rendering](#Pre-rendering)
 - [Static Generation](#Static-Generation)
 - [Static Generation with getInitalProps](#Static-Generation-with-getInitalProps)
+- [Pages Vs Components](#Pages-Vs-Components)
 
 
 # Pre-rendering
@@ -105,3 +106,4 @@ export async function getStaticProps() {
 - Then inside of the  props define as many things you want to return as a prop to the page
 - Then accept this as props by the page itself 
 
+# Pages Vs Components
