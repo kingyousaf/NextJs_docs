@@ -2,7 +2,7 @@
 
 - [Pre-rendering](#Pre-rendering)
 - [Static Generation](#Static-Generation)
-- [Static Generation with getInitalProps](# #Static-Generation-with-getInitalProps)
+- [Static Generation with getInitalProps](#Static-Generation-with-getInitalProps)
 
 
 # Pre-rendering
