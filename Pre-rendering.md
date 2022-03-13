@@ -189,7 +189,7 @@ export async function getStaticProps() {
   const Posts = await res.json();
   return {
     props: {
-      posts: Posts.slice(0,3),
+      posts: Posts,
     },
   };
 }
@@ -222,27 +222,22 @@ export async function getStaticProps(ctx) {
 }
 
 export async function getStaticPaths() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const data = await res.json();
+
+  const paths = data.map((post) => {
+    return {
+      params: {
+        postid: `${post.id}`,
+      },
+    };
+  });
   return {
-    paths: [
-      {
-        params: {
-          postid: "1",
-        },
-      },
-      {
-        params: {
-          postid: "2",
-        },
-      },
-      {
-        params: {
-          postid: "3",
-        },
-      },
-    ],
+    paths: paths,
     fallback: false,
   };
 }
+
 
 ```
 
