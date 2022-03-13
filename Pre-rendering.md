@@ -2,6 +2,7 @@
 
 - [Pre-rendering](#Pre-rendering)
 - [Static Generation](#Static-Generation)
+- [Static Generation with getInitalProps](# #Static-Generation-with-getInitalProps)
 
 
 # Pre-rendering
@@ -32,7 +33,7 @@
  ## What is static generation ?
  - A method of pre-rendering where the ```HTML``` is generated at build time
  - Also fills any data needed into the ```HTML``` before hand
- - ```HTML``generated in advance 
+ - ```HTML```generated in advance 
  - Recommended method
  - pages are cached by a CDN and served to the client instantly
  - Perfomance booster 
@@ -44,3 +45,11 @@
  - eCommernce
  - product pages
  - etc
+
+ # Static Generation with getInitalProps
+ 
+ ## What is getInitalProps ?
+ 
+ ## How to use it ?
+ 
+ ## When to use it ?
