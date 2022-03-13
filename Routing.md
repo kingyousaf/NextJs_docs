@@ -170,3 +170,25 @@ do reteieve the nexted values use
  const router = useRouter();
  const { catogry, productNumber } = router.query;
 ```
+
+
+## video 9 - Catch All Routes
+
+### What is a catch all route ?
+
+a route that you will be taken to after a certain point 
+
+for example we make a ```docs``` folder then want to catch all the routes passed this bit
+
+like ```docs/doc2/para2/4``` and any other ```/``` after it
+
+we could use this to continoulsy filter a page
+
+to do this make
+-  a folder named ```docs```
+-  inside of it make a file named ```[...params]```
+-  Anything after ```docs/``` will shwo this 
+-  if there is a defined route like a file named ```area``` so ```pages/docs/[...params] and area.js ```
+-  if you go to ```docs/area``` it wont be caught by the catch all but be served that page.
+
+to catch all routes even if the url is somthing not hard defined put the spread opeartor in [] pait of braces so ```[[...params]]```
