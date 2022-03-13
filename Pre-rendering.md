@@ -107,3 +107,11 @@ export async function getStaticProps() {
 - Then accept this as props by the page itself 
 
 # Pages Vs Components
+
+### Pages:
+- Pages give automatic routing
+- Accss to functions like getStaticProps etc
+
+### Components 
+- Used as re-uasble elemts in an UI
+- Don't have access to page functions
