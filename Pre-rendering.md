@@ -1,7 +1,7 @@
 # summary
 
 - [Pre-rendering](#Pre-rendering)
-- [Static Generation](#StaticGeneration)
+- [Static Generation](#Static-Generation)
 
 
 # Pre-rendering
