@@ -1,5 +1,3 @@
-# next_mastary_docs
-
 
 ## video 3 - Project Structure
 
