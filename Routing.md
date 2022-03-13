@@ -146,10 +146,26 @@ A route inside of another route like ``` /details/person1 ```
 
 Then when we visit that page at ```/folder1/file1``` we will be presented with that page.
 
-### making folder by itself
+### Making folder by itself
 
 If you make just a folder called ```pages/blog``` and try to visit /blog youll get an error
 
 To solve this use a index file, mentioned beofre it becomes the route of the folder meaning first
 
 so we get ```pages/blog/index``` then when we visit ```/blog``` we will get the index page
+
+
+## video 7 - Dynamic Routes
+
+### What is a dynamic route
+
+#### A route wich url values change
+
+instead of making files for ```product/product1 and product/product2 etc ``` we instead make a single file which
+will take care of all these use cases for us.
+
+### To make a dynamic route 
+
+we wrap the file like ```products1``` in [] braces and rename it to
+
+```[productNumber]```
