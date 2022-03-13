@@ -3,7 +3,7 @@
 
 ## video 3 - Project Structure
 
-### You will be given some basic folders to start of with lets exaplin each one
+### You will be given some basic folders to start of with lets explain each one
 
 - Pages - This is where all your routes will live
 - Public - This is where all assets will live like images etc
@@ -15,8 +15,7 @@ We also get files like
 
 ## video 4 - Routing Section Intro
 
-In regular REACT you are not given a routing system so many people download external packages to do the work for them like 
-REACT Router
+In REACT you are not given a routing system so a external packages is downloaded
 
 #### What is a routing system ?
 
@@ -24,18 +23,21 @@ The ability to go to diffrent pages
 
 ### Routing in NEXT Js
 
-It is all handled for us through the Folder Pages
+Pre-built in with the pages folder
 
 ## video 5 - Routing with Pages Folder
 
-In Next Js if you create a file in the Pages folder then it will become a route that you can visit
+In the ```pages``` folder creating a file will make that route available
 
 ##### For Example:
 
-If we create a file named details.js in the pages folder then visit [localhost:3000/details](http://localhost:3000/details) It will be 
-its own page
+create :
+- ```details.js``` in ```Pages```
+- visit [localhost:3000/details](http://localhost:3000/details) 
+- Add any specific content to that page
 
-pages/details.js
+Code:
+```pages/details.js```
 ```bash
 import React from 'react'
 
@@ -52,16 +54,18 @@ export default details
 
 ### How to create a landing page
 
-#### What is a landing page
+#### What is a landing page ?
 The page that the user will first see when coming to your website
 
 #### Creating a landing page
 
-In the Pages folder we are giving the ``` index.js ``` this is out landing page.
+To create a landing page:
+- ```Pages``` file ```index.js``` is your landing page
+- Visit [localhost:3000/](http://localhost:3000/)
+- The name ```index.js``` will make it the defualt route for that folder
 
-The name index is special as it becomes the route of the folder meaning the first
-
-pages/index.js
+Code:
+```pages/index.js```
 ```
 import React from 'react'
 
@@ -74,11 +78,9 @@ const index = () => {
 export default index
 ```
 
-Visit [localhost:3000/](http://localhost:3000/)
+#### Now you have the ability to create any route you want in Next Js just
 
-Now you have the ability to create any route you want in Next Js just
-
-- name a file how you want in the pages folder ending in ```.js```
+- name a file how you want in the ```pages``` folder
 - Make sure its a function that is ```export default ```
 - And simply visit ```localhost:3000/nameOfFile ```
 
@@ -89,46 +91,46 @@ Now you have the ability to create any route you want in Next Js just
 
 A route inside of another route like ``` /details/person1 ```
 
-### To make nexted routes 
+### To make nexted routes:
 
- we first make a folder and then put files inside of those```pages/folder1/file1```
+- make a folder named ```nested``` in ```pages```
+- inside of ```nested``` make a file named ```route1```
+- Visit [localhost:3000](https://localhost:300/nested/route1
 
-Then when we visit that page at ```/folder1/file1``` we will be presented with that page.
 
-### Making folder by itself
+### Visting a folder route by itself
 
-If you make just a folder called ```pages/blog``` and try to visit /blog youll get an error
-
-To solve this use a index file, mentioned beofre it becomes the route of the folder meaning first
-
-so we get ```pages/blog/index``` then when we visit ```/blog``` we will get the index page
+- You made a folder named ```nested```
+- You want to visit ```/nested``` by itself
+- Add a ```index.js``` file inside of it
+- This will show when visiting ```/nested```
 
 
 ## video 7 - Dynamic Routes
 
-### What is a dynamic route
+### What is a dynamic route?
 
-#### A route wich url values change
+#### A url which values chnage
 
-instead of making files for ```product/product1 and product/product2 etc ``` we instead make a single file which
-will take care of all these use cases for us.
+```/blog/1``` and ```/blog/2``` etc
 
-### To make a dynamic route 
+### How to make a dynamic routes:
 
-we wrap the file like ```products1``` in [] braces and rename it to
+- wrap the file in ```[ ]```braces 
+- Example ```[blogNumber].js``` in ```pages/blog/[blogNumber].js```
+- Visit [localhost:3000/blog/1](https://localhost:3000/blog/1) and [localhost:3000/blog/1](https://localhost:3000/blog/2)
+- There ```url``` params are diffrent but they serve the same page
 
-```[productNumber].js```
+#### When to use dynamic pages
 
-Now if we visit ```/product/anythingAfter``` we will just get the ```[productNumber].js``` page
+- serve the same page layout but put diffrent content in them based on the ```url``` params
 
-Now we can use this page to chnage its content depedning on which product we are on 
+### Changing the content in a dynamic page
 
-### Accessing the dynamic value
-
-to access the ```anythingAfter``` value we use the ```useRouter``` Hook given to us by Next Js.
-
-With this we can retieve the ```query``` which is the dynamic part of the url
-
+- First we need to get the dynamic ```url``` values like ```/blog/1``` the ```1```
+- To retreieve the ```1``` we use ```Next Router```
+- The dynamic bit of the ```url``` is called a ```query```
+- To access the query we use this code:
 ```
 import { useRouter } from 'next/router'
 import React from 'react'
@@ -141,54 +143,58 @@ const ProductNumber = () => {
 
 export default ProductNumber;
 ```
-
+- The we can do multiple stuff like call an api with the params of the url to show specific content etc
 
 
 ## video 8 - Nested Dynamic Routes
 
-These are routes which are nested in each other
+### What is a nested Dynamic Route?
 
-but there values change
+- It is like a regular nested route but there are more variables that can change
+- Like ```product/sweater/1``` and ```/product/hat/1```
+- The second and third params change and they are ```nested``` in ```product```
 
-for example ```/product/sweater/1``` and ```/product/hat/1``` here the secodn and third params change
+### How to make nested Dynamic Route
 
-to achomplish this 
-- we make folder named ```product``` in pages
-- then another folder named ```[catogry]``` 
-- inside of it ```[productNumber]```
-
+- Make a folder named ```product``` in ```pages```
+- inside of ```product``` make another folder named ```[typeOfProduct]```
+- inside of ```[typeOfProduct]``` make a file named ```[productId].js```
+- Now we have ```pages/[typeOfProduct]/[productId].js```
+- If we then put two ```/``` after product with params we will be served the single page
+- We can continue the nesting as much as you want
 
 ### retreiving the values for a nested route
 
-Know that we can make dynamic nested routes we want to retieve the values for each nested route
-
-we could use this to filter or chnage the product or layout fo the page by making api calls
-
-do reteieve the nexted values use 
-
+- use ```Next Router ``` like for single dynamic pages
+- Pull the dynamic values from the url 
+code:
 ```
  const router = useRouter();
- const { catogry, productNumber } = router.query;
+ const { typeOfProduct, productId } = router.query;
 ```
-
+From here you can make diffrent api calls or change the content accordingly with the information
 
 ## video 9 - Catch All Routes
 
 ### What is a catch all route ?
 
-a route that you will be taken to after a certain point 
+- a route that you will be taken to regardless of nesting
+- Lests say we want to show the same page after every dynamic param after ```/docs```
 
-for example we make a ```docs``` folder then want to catch all the routes passed this bit
+### How to make a catch all route
 
-like ```docs/doc2/para2/4``` and any other ```/``` after it
+- Inside of ```docs``` folder make a file named ```[...params].js```
+- You need to have the convention of ```[...nameOfFile].js``` for it to work
+- Youll have ```pages/docs/[...params].js```
+- Now if you visit anything after ```/docs``` youll get served this page
+- Like ```/docs/example/2/third``` every dynamic value after will still be served this page
+- But from here you csn change the content by filltering for example
 
-we could use this to continoulsy filter a page
 
-to do this make
--  a folder named ```docs```
--  inside of it make a file named ```[...params]```
--  Anything after ```docs/``` will shwo this 
--  if there is a defined route like a file named ```area``` so ```pages/docs/[...params] and area.js ```
--  if you go to ```docs/area``` it wont be caught by the catch all but be served that page.
+### How to make a defualt catch route
+ if you want to show a route regarless of any none specified route if a person visits then wrap the ```[...params].js``` in another ```[ ]```
+ 
+ Like ```[[...params]].js```
+ 
+ This will be showed then.
 
-to catch all routes even if the url is somthing not hard defined put the spread opeartor in [] pait of braces so ```[[...params]]```
