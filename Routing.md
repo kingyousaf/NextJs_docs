@@ -25,3 +25,9 @@ and his playlist on [NextJS](https://www.youtube.com/watch?v=GOdu5C8JzL8&list=PL
 getting started with NextJs
 
 ## video 2 - Hello World
+
+To get started with building NextJs applications we need some pre-requisites
+
+- Item 1
+- Item 2
+- Item 3
