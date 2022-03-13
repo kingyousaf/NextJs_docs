@@ -39,7 +39,12 @@ So we need to follow these steps in order to build a application
 - Open up VsCode
 - Open up an empty folder inside of it 
 - Open up the intergrated terminal
-- Roun the command 
+- Run the command 
 ```bash 
 yarn create next-app ./ 
 ```
+After downloading it run 
+```bash
+yarn dev
+```
+To run it on a developemnt server over at [localhost:3000](http://localhost:3000/)
