@@ -26,8 +26,17 @@ getting started with NextJs
 
 ## video 2 - Hello World
 
-To get started with building NextJs applications we need some pre-requisites
+### To get started with building NextJs applications we need some pre-requisites
 
-- Item 1
-- Item 2
-- Item 3
+- Have [NodeJs](https://nodejs.org/en/) installed
+- Have [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable) installed
+- Have a text editor, [VsCode](https://code.visualstudio.com/download)
+
+#### Now to actually build a NextJs application
+
+So we need to follow these steps in order to build a application
+
+- Open up VsCode
+- Open up an empty folder inside of it 
+- Open up the intergrated terminal
+- Roun the command ```bash yarn create next-app ./ ```
