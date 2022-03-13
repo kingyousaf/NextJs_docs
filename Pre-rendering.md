@@ -113,5 +113,5 @@ export async function getStaticProps() {
 - Accss to functions like getStaticProps etc
 
 ### Components 
-- Used as re-uasble elemts in an UI
+- Used as re-usable elements in an UI
 - Don't have access to page functions
