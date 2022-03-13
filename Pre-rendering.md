@@ -7,7 +7,7 @@
 
 # Pre-rendering
 
-## What is prendering ?
+## What is pre-rendering ?
 
 - The page is built before being sent to the clinet
 - Next js generates the ```HTML``` with all its data in advance and serves it to the client 
