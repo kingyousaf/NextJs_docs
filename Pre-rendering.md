@@ -28,3 +28,19 @@
 
 
 # Static Generation
+
+ ## What is static generation ?
+ - A method of pre-rendering where the ```HTML``` is generated at build time
+ - Also fills any data needed into the ```HTML``` before hand
+ - ```HTML``generated in advance 
+ - Recommended method
+ - pages are cached by a CDN and served to the client instantly
+ - Perfomance booster 
+ ## How to use static generation for a page?
+ - By defualt it happens to eah page made in NEXT js
+ 
+ ## When to use it ?
+ - Blog pages
+ - eCommernce
+ - product pages
+ - etc
