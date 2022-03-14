@@ -19,6 +19,6 @@
   - ```personalised data``` and good ```SEO``` 
   
   ## How to use it 
-
+  - Export function ```getServerSideProps```
 
 # getServerSideProps
