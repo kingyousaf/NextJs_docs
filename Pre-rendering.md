@@ -289,7 +289,20 @@ export async function getStaticPaths() {
 ```
 
 ### fallback value = ```true```
--
+- Paths not made at build time will ```not``` show a ```404 Page```
+- Paths not made will show a ```fallback``` version of the page on the first request to that path
+- At build time showit might show a ```error``` because the ```id``` undefined
+
+### Fixing the error 
+
+This is placed in the dynamic page ```[postid]```
+code:
+```bash
+import { useRouter } from "next/router";
+  if (router.isFallback) {
+    return <h1>Loading component for post</h1>
+  }
+```
 
 ## When to use it ?
 
