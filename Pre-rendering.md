@@ -303,9 +303,24 @@ import { useRouter } from "next/router";
     return <h1>Loading component for post</h1>
   }
 ```
+- This will show the loading component then a newly generated page when you visit a new param
+
+### Showing a 404 page ```fallabck = false```
+
+- in your ```[postid]``` async function getStaticProps have a ```notFound```
+- ```notFound``` if ```true``` will show ```404 page``` if the params are incorect
+
+code:
+```
+if(!data.id){
+ return {
+ notFound: true,
+ }
+}
+```
+
 
 ## When to use it ?
 
 #### fallback value = ```false```
 - sutiable for an application with a few paths
-
