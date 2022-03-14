@@ -3,6 +3,7 @@
 
  # Summary
  - [SSR exaplianed](#SSR-explained)
+ - [SSR getServerSideProps](#getServerSideProps)
  
 
 # SSR explained
@@ -18,3 +19,6 @@
   - ```personalised data``` and good ```SEO``` 
   
   ## How to use it 
+
+
+# getServerSideProps
