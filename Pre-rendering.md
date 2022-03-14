@@ -6,6 +6,7 @@
 - [Pages Vs Components](#Pages-Vs-Components)
 - [Inpecting Static Generation Builds](#Inpecting-Static-Generation-Builds)
 - [SSG with Dynamic Parameters](#SSG-with-Dynamic-Parameters)
+- [Incremental Static Regeneration](#Incremental-Static-Regeneration)
 - [getStaticProps fallback](#getStaticProps-fallback )
 - [Master detail Pattern](#Master-detail-Pattern)
 
@@ -344,3 +345,22 @@ if(!data.id){
 - Some ```crawlers ``` didnt support JavaScript
 - The ```crawlers``` would see a loading page then the main page
 - Reccomended to keep it to ```true``` fallback and just have the main pages served then build the rest
+
+
+
+
+# Incremental Static Regeneration
+
+### ```Iusses with static generation for big website```
+
+- ```static generation is good``` but issues are ``` Build time is proportional to the Nth pages ```
+- Once generated the page can contain stale data until you ```re-build``` the application
+- The increased build time for lots of pages
+- Higher cost re-building the application
+- Problems for when adding new pages increases time
+
+## What is it ?
+
+## How to use it
+
+## When to use it 
