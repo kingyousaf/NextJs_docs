@@ -326,11 +326,21 @@ if(!data.id){
 - Paths not generated at build time will not result in a ```404```
 - Instead will build the page on the server and then serve it
 - then requesting for the same page will be served the built page 
+
+
 ## When to use it ?
 
 #### fallback value = ```false```
 - sutiable for an application with a few paths
- #### fallback value = ```true```
+- 
+#### fallback value = ```true```
  - if your app has a very large number of static pages
  - like a large eCommerce sites
  - Like build popular products and fallbacks for other products
+
+### fallback value = ```blocking```
+- on ```UX``` level some users perfer no loading screens and just being served a page
+- It prevents any layout shifts
+- Some ```crawlers ``` didnt support JavaScript
+- The ```crawlers``` would see a loading page then the main page
+- Reccomended to keep it to ```true``` fallback and just have the main pages served then build the rest
