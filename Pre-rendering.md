@@ -269,4 +269,23 @@ export async function getStaticPaths() {
 - The paths returned from getStaticPaths will be rendred in HTML at build time
 - Any path not returned will be directed to a ```404``` page
 
+```bash
+export async function getStaticPaths() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const data = await res.json();
+
+  const paths = data.map((post) => {
+    return {
+      params: {
+        postid: `${post.id}`,
+      },
+    };
+  });
+  return {
+    paths: paths,
+    fallback: false,
+  };
+}
+```
+
 ## When to use it ?
