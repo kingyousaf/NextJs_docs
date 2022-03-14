@@ -397,11 +397,92 @@ if(!data.id){
  
  - 5.) Go to [localhost:4000/products](http://localhost:4000/products)
  
- - 6.) Now you cn filter by adding /products/1 etc for the data read docs to find more out
+ - 6.) Now make a folder ```products``` give that an ```index.js``` and a ```[ID]``` file
+ ```products/index.js```
+ ```
+ import Link from "next/link";
+import React from "react";
+
+const index = ({ products }) => {
+  return (
+    <>
+      <ul>
+        {products.map((product) => (
+          <li key={product.id}>
+            <Link href={`/products/${product.id}`}>
+              <a>{product.title}</a>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </>
+  );
+};
+
+export default index;
+
+export async function getStaticProps() {
+  const res = await fetch("http://localhost:4000/products");
+  const Products = await res.json();
+  return {
+    props: {
+      products: Products,
+    },
+  };
+}
+
+ ```
+ 
+ ```products/[ID].js```
+ ```
+ import { useRouter } from "next/router";
+import React from "react";
+
+const PostId = ({ Product }) => {
+  const router = useRouter();
+  if (router.isFallback) {
+    return <h1>Loading component</h1>;
+  }
+  return <div>{Product.title} post</div>;
+};
+
+export default PostId;
+
+export async function getStaticPaths() {
+  return {
+    paths: [{ params: { ID: "1" } }],
+    fallback: true
+  };
+}
+
+export async function getStaticProps(ctx) {
+  const { params } = ctx;
+  const res = await fetch(`http://localhost:4000/products/${params.ID}`);
+  const data = await res.json();
+  return {
+    props: {
+      Product: data,
+    },
+  };
+}
+
+ ```
+ 
+ ```
+ props: {
+      products: Products,
+    },
+    revalidate: 4,
+  };
+ ```
+ 
+ updates the stale data
 ## What is it ?
 - A alternative to regular ```SSR``` to improve page builds for dynamic pages
 - use ```Json server ``` for mock data that chnages
 
 ## How to use it
+- ``` revalidate: number, ```` set for a ```getStaticProps```
 
 ## When to use it 
+- When you have data that changes 
