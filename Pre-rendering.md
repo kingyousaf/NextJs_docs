@@ -353,8 +353,54 @@ if(!data.id){
 
 # Incremental Static Regeneration
 
+## Example :
 
+- 1.) download [JSON-server](https://www.npmjs.com/package/json-server)
+```bash
+ yarn add json-server
+```
+- 2.) Make a file named ```db.json```
+
+```
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Product 1",
+      "price": 1000,
+      "description": "description 1"
+    },
+    {
+      "id": 2,
+      "title": "Product 2",
+      "price": 15000,
+      "description": "description 2"
+    },
+    {
+      "id": 3,
+      "title": "Product 3",
+      "price": 2000,
+      "description": "description 3"
+    }
+  ]
+}
+```
+- 3.) ```package.json``` add in the scripts
+```
+ "serve-json": "json-server --watch db.json --port 4000"
+```
+
+ - 4.) run this command 
+ ```bash
+ yarn serve-json
+ ```
+ 
+ - 5.) Go to [localhost:4000/products](http://localhost:4000/products)
+ 
+ - 6.) Now you cn filter by adding /products/1 etc for the data read docs to find more out
 ## What is it ?
+- A alternative to regular ```SSR``` to improve page builds for dynamic pages
+- use ```Json server ``` for mock data that chnages
 
 ## How to use it
 
