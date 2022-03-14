@@ -482,7 +482,9 @@ export async function getStaticProps(ctx) {
 - use ```Json server ``` for mock data that chnages
 
 ## How to use it
-``` revalidate: number, ```` set for a ```getStaticProps```
+``` revalidate: number, ```` 
+set for a 
+```getStaticProps```
 
 ## When to use it 
 - When you have data that changes 
