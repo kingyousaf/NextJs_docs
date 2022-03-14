@@ -65,3 +65,7 @@ export async function getServerSideProps() {
 }
 
 ```
+
+  ## when to use it 
+  - Only for pre-rendering and ```not client-side data fetching```
+  - If you want to build a page ```on request time```
