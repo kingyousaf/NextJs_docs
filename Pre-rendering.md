@@ -6,6 +6,7 @@
 - [Pages Vs Components](#Pages-Vs-Components)
 - [Inpecting Static Generation Builds](#Inpecting-Static-Generation-Builds)
 - [SSG with Dynamic Parameters](#SSG-with-Dynamic-Parameters)
+- [getStaticProps fallback](#getStaticProps-fallback )
 - [Master detail Pattern](#Master-detail-Pattern)
 
 
@@ -257,3 +258,12 @@ export async function getStaticPaths() {
 - We could pre-render both of these pages
 
 
+# getStaticProps fallback 
+
+## What is the fallback ?
+- A mandetory value that has to be added 
+- Three possible values ```false``` ```true``` ```'blocking'```
+
+## How to use it 
+
+## When to use it ?
