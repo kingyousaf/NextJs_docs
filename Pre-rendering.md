@@ -36,13 +36,15 @@
 
 # Static Generation
 
- ## What is static generation ?
- - A method of pre-rendering where the ```HTML``` is generated at build time
- - Also fills any data needed into the ```HTML``` before hand
- - ```HTML```generated in advance 
- - Recommended method
- - pages are cached by a CDN and served to the client instantly
- - Perfomance booster 
+## What is static generation ?
+- Is a method of pre-rendering where ```HTML``` pages are generated at build time
+- Pre-rendered pages can be pushed to a ```CDN```, ```cached``` and served to clients across the globe ```imedialty```
+- Static content is fast and better for ```SEO``` and ```indexed``` by the search engine
+- Useing it with ```getStaticProps``` and ```getStaticPaths``` can make dynamic pages
+
+## issues with static generation
+- The build time is proportional to the ```N'th``` pages
+- Once generated pages can have ```stale``` data
  ## How to use static generation for a page?
  - By defualt it happens to eah page made in NEXT js
  
@@ -351,13 +353,6 @@ if(!data.id){
 
 # Incremental Static Regeneration
 
-### ```Iusses with static generation for big website```
-
-- ```static generation is good``` but issues are ``` Build time is proportional to the Nth pages ```
-- Once generated the page can contain stale data until you ```re-build``` the application
-- The increased build time for lots of pages
-- Higher cost re-building the application
-- Problems for when adding new pages increases time
 
 ## What is it ?
 
