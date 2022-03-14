@@ -288,4 +288,11 @@ export async function getStaticPaths() {
 }
 ```
 
+### fallback value = ```true```
+-
+
 ## When to use it ?
+
+#### fallback value = ```false```
+- sutiable for an application with a few paths
+
