@@ -324,3 +324,7 @@ if(!data.id){
 
 #### fallback value = ```false```
 - sutiable for an application with a few paths
+ #### fallback value = ```true```
+ - if your app has a very large number of static pages
+ - like a large eCommerce sites
+ - Like build popular products and fallbacks for other products
