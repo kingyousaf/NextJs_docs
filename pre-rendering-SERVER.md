@@ -1,3 +1,20 @@
 # Server side generation
 
-### Check out static generation at [Satic generation](https://github.com/kingyousaf/NextJs_docs/blob/main/Pre-rendering-STATIC.md)
+
+ # Summary
+ - [SSR exaplianed](#SSR-explained)
+ 
+
+# SSR explained
+
+  ## What is SSR
+  - Pre-rendering where ```HTML``` built at ```request time```
+  - ```HTML``` generated for ```every request```
+  
+  ## When to use it 
+  - For a website ```similair to twitter```
+  - Allows you to have upto-date information and good SEO
+  - If you need to fetch data on ```request```
+  - ```personalised data``` and good ```SEO``` 
+  
+  ## How to use it 
