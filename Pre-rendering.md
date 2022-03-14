@@ -265,5 +265,8 @@ export async function getStaticPaths() {
 - Three possible values ```false``` ```true``` ```'blocking'```
 
 ## How to use it 
+### fallback value = ```false```
+- The paths returned from getStaticPaths will be rendred in HTML at build time
+- Any path not returned will be directed to a ```404``` page
 
 ## When to use it ?
