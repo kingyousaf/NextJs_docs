@@ -290,8 +290,10 @@ export async function getStaticPaths() {
 
 ### fallback value = ```true```
 - Paths not made at build time will ```not``` show a ```404 Page```
+- The server will then ```build``` it and then ```serve``` the page
 - Paths not made will show a ```fallback``` version of the page on the first request to that path
 - At build time showit might show a ```error``` because the ```id``` undefined
+- Use this to build your ```main pages``` then when they click on other pages use fallback to ```build the page and then serve it```.
 
 ### Fixing the error 
 
@@ -320,8 +322,10 @@ if(!data.id){
 ```
 
 ### fallback value = ```blocking```
-
--
+- similar to fallback is set to true but wont show anything while the page is being generated
+- Paths not generated at build time will not result in a ```404```
+- Instead will build the page on the server and then serve it
+- then requesting for the same page will be served the built page 
 ## When to use it ?
 
 #### fallback value = ```false```
