@@ -74,3 +74,72 @@ export async function getServerSideProps() {
 
 
 # SSR with Dynamic params
+
+```[category.js]```
+```
+import React from "react";
+
+const category = ({ artical, category }) => {
+  return (
+    <div>
+      {category}{" "}
+      <h1>
+        {artical.map((art) => (
+          <h1 key={art.title}>{art.title}</h1>
+        ))}
+      </h1>
+    </div>
+  );
+};
+
+export default category;
+
+export async function getServerSideProps(ctx) {
+  const { params } = ctx;
+  const { category } = params;
+  const res = await fetch(`http://localhost:4000/news?category=${category}`);
+  const data = await res.json();
+  return {
+    props: {
+      artical: data,
+      category,
+    },
+  };
+}
+
+```
+
+```news```
+```
+import Link from "next/link";
+import React from "react";
+
+const index = ({ articales }) => {
+  return (
+    <>
+      <div>
+        {articales.map((articale) => (
+          <>
+            <Link href={`/news/${articale.category}`}>
+              <a>{articale.title}</a>
+            </Link>
+          </>
+        ))}
+      </div>
+    </>
+  );
+};
+
+export default index;
+
+export async function getServerSideProps() {
+  const res = await fetch("http://localhost:4000/news");
+  const data = await res.json();
+  return {
+    props: {
+      articales: data,
+    },
+  };
+}
+
+```
