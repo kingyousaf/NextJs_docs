@@ -2,6 +2,8 @@
 - [Client-side Data fetching](#Client-side-Data-fetching)
 - [SWR for client side data fetching](#SWR-for-client-side-data-fetching)
 
+# Use SWR for client side data fetching 
+
 
 
 # Client side Data fetching
