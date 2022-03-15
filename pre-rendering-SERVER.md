@@ -2,7 +2,7 @@
 
 
  # Summary
- - [SSR exaplianed](#SSR-explained)
+ - [SSR explanied](#SSR-explained)
  - [SSR getServerSideProps](#getServerSideProps)
  - [SSR Dynamic params](#SSR-with-Dynamic-params)
  - [SSR getServerSideProps Context](#SSR-getServerSideProps-Context)
