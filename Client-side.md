@@ -64,6 +64,7 @@ export default clientSide;
 # SWR for client side data fetching
 
 - simalr to the one above but uses a libary with a few ectra features
+- More easier to undeetand and write code for simlar stuff done in the above example
 
 ### ```Code ```:
 ```
