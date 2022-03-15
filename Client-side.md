@@ -1,5 +1,6 @@
 # summary
 - [Client-side Data fetching](#Client-side-Data-fetching)
+- [SWR for client side data fetching](#SWR-for-client-side-data-fetching)
 
 
 
@@ -7,6 +8,7 @@
 
 ## What is it
 - fetching data not on the server.
+- If you dont want to have seo for a user dashbaord component
 
 ## When to use it 
 - Example user dahsboard hidden behinde a login screen
@@ -53,5 +55,44 @@ const clientSide = () => {
 };
 
 export default clientSide;
+
+```
+
+
+
+# SWR for client side data fetching
+
+- simalr to the one above but uses a libary with a few ectra features
+
+### ```Code ```:
+```
+import React from "react";
+import useSWR from "swr";
+
+const fetcher = async () => {
+  const res = await fetch("http://localhost:4000/dashbaord");
+  const data = await res.json();
+  return data;
+};
+
+const swr = () => {
+  const { data, error } = useSWR("dashboard", fetcher);
+
+  if (error) {
+    return <h1>Ì Error</h1>;
+  }
+  if (!data) {
+    return <h1>Loading</h1>;
+  }
+    return (
+      <>
+        {data.map((dash) => (
+          <h1>{dash.posts}</h1>
+        ))}
+      </>
+    );
+};
+
+export default swr;
 
 ```
