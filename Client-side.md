@@ -3,7 +3,7 @@
 
 
 
-# Client-side Data fetching
+# Client side Data fetching
 
 ## What is it
 - fetching data not on the server.
