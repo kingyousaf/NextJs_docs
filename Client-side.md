@@ -21,6 +21,7 @@
 
 ### ```code:```
 
+## For this i made the dahsbaord data an array that why i ahve to map over it in future make it a single object
 ```
 import React, { useEffect, useState } from "react";
 
