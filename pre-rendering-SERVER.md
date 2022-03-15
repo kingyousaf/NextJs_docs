@@ -5,6 +5,7 @@
  - [SSR exaplianed](#SSR-explained)
  - [SSR getServerSideProps](#getServerSideProps)
  - [SSR Dynamic params](#SSR-with-Dynamic-params)
+ - [SSR getServerSideProps Context](#SSR-getServerSideProps-Context)
  
 
 # SSR explained
@@ -143,3 +144,25 @@ export async function getServerSideProps() {
 }
 
 ```
+
+
+
+
+# SSR getServerSideProps Context 
+
+## Objects access from the context
+- The ```Request``` and ```Resposne```
+- Simalr to express js
+```
+  const { params , req, res, query} = ctx;
+```
+ ## Req
+ - ```HTTP``` incoming object
+
+## Res
+- ```HTTP``` response object
+
+## query
+- dynamic url string
+
+### Use this for user cookies and any logic that use in express and node here 
