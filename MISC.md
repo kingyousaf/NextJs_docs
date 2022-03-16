@@ -56,3 +56,50 @@ function MyApp({ Component, pageProps }) {
 export default MyApp
 
 ```
+
+- If you want a diffrent style for a indivual page add this logic at the bottom
+
+``` _app.js```
+
+```
+import "../styles/globals.css";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+function MyApp({ Component, pageProps }) {
+  if (Component.getLayout) {
+    return Component.getLayout(<Component {...pageProps} />);
+  }
+  return (
+    <>
+      <Header />
+      <Component {...pageProps} />
+      <Footer />
+    </>
+  );
+}
+
+export default MyApp;
+
+```
+
+
+```
+import React from "react";
+import Footer from "../components/Footer";
+
+const about = () => {
+  return <div>about</div>;
+};
+
+export default about;
+
+about.getLayout = function PageLayout(page) {
+  return (
+    <>
+      {page}
+      <Footer />
+    </>
+  );
+};
+
+```
