@@ -1,7 +1,11 @@
-# Api 
+# Api -
+
+- You can write all your bussiness logic here and it wont be shiped to with the final bowser bundle
+- You dont need other libarys to simply configure a restful api
 
 # Summary
  - [creating an api](#Creating-an-api)
+ - [API GET request](#API-GET-request)
 
 
 # Creating an api
@@ -27,4 +31,69 @@ export default function handler(req, res) {
  # When to create an api endpoint 
  - When you have your own api and can simply put in next js 
  - Makes it more simplar less relicance on other libarys as its built in
+
+
+
+# API GET request
+
+## What is a API GET request
+- fetching data froman api endppint
+
+## How to make a API GET request
+
+code : 
+```/data/comments```
+```
+export const comments = [
+  {
+    id: 1,
+    text: "comment 1",
+  },
+  {
+    id: 2,
+    text: "comment 2",
+  },
+  {
+    id: 3,
+    text: "comment 3",
+  },
+];
+
+```
+
+``` /api/comments/index ```
+
+```
+import { comments } from "../../../data/comments";
+
+export default function handler(req,res) {
+    res.status(200).json(comments)
+}
+```
+
  
+ ``` pages/comments/index```
+ 
+ ```
+ import React, { useState } from "react";
+
+const index = () => {
+  const [comments, setComments] = useState([]);
+  const fetchComments = async () => {
+    const res = await fetch("/api/comments");
+    const data = await res.json();
+    setComments(data);
+  };
+  return (
+    <div>
+      comments get <button onClick={fetchComments}> get comments</button>
+      {comments.map((comment) => (
+        <h1>{comment.text}</h1>
+      ))}
+    </div>
+  );
+};
+
+export default index;
+
+ ```
