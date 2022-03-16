@@ -10,7 +10,7 @@
  - [Dynamic API Routes](#Dynamic-API-Routes)
  - [DELETE requests](#DELETE-requests)
  - [CATCH ALL routes](#CATCH-ALL-routes)
- - [APIS & Pre rendering](#APIS-&-Pre-rendering)
+ - [APIS and Pre rendering](#APIS-and-Pre-rendering)
 
 
 # Creating an api
@@ -326,4 +326,4 @@ example output ```["jejje","ejej"]``` etc ```http://localhost:3000/api/jejje/eje
 - For a single route then having a bunch of more optional api routes
 
 
-# APIS & Pre rendering
+# APIS and Pre rendering
