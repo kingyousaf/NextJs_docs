@@ -8,6 +8,7 @@
  - [API GET request](#API-GET-request)
  - [API POST request](#API-POST-request)
  - [Dynamic API Routes](#Dynamic-API-Routes)
+ - [DELETE requests](#DELETE-requests)
 
 
 # Creating an api
@@ -203,3 +204,95 @@ export default function handler(req, res) {
 
 ## When to make a dynmaic route
 - For the example above to delete a specific comment by going to /commments/dynamciID then deleteing that
+
+
+# DELETE requests
+- Use the ame logic as in the above example 
+
+## How to make a delete request
+
+``` [commentsId].js```
+```
+import { comments } from "../../../data/comments";
+
+export default function handler(req, res) {
+  const { commentId } = req.query;
+  if (req.method === "GET") {
+    const comment = comments.find(
+      (comment) => comment.id === parseInt(commentId)
+    );
+    res.status(200).json(comment);
+  } else if (req.method === "DELETE") {
+    const deletedComment = comments.find(
+      (comment) => comment.id === parseInt(commentId)
+    );
+    const index = comments.findIndex(
+      (comment) => comment.id === parseInt(commentId)
+    );
+    comments.splice(index, 1);
+    res.status(200).json(deletedComment);
+  }
+}
+
+```
+
+``` pages/comments``` method on the button for each comment
+
+```
+ import React, { useState } from "react";
+
+const index = () => {
+  const [comments, setComments] = useState([]);
+  const [userComment, setUserComment] = useState("");
+  const fetchComments = async () => {
+    const res = await fetch("/api/comments");
+    const data = await res.json();
+    setComments(data);
+  };
+  const submit = async (e) => {
+    e.preventDefault();
+    const response = await fetch("/api/comments", {
+      method: "POST",
+      body: JSON.stringify({ userComment }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    const data = await response.json();
+    console.log(data);
+  };
+  const deleteComment = async (commentId) => {
+    const res = await fetch(`/api/comments/${commentId}`, {
+      method: "DELETE",
+    })
+    const data = await res.json();
+    console.log(data)
+    fetchComments()
+  };
+  return (
+    <div>
+      comments get <button onClick={fetchComments}> get comments</button>
+      {comments.map((comment) => (
+        <>
+          <h1>{comment.text}</h1>
+          <button onClick={() => deleteComment(comment.id)}>
+            delete comment
+          </button>
+        </>
+      ))}
+      <form onSubmit={submit}>
+        <input
+          type="text"
+          placeholder="comment"
+          value={userComment}
+          onChange={(e) => setUserComment(e.target.value)}
+        />
+        <button type="submit">Submit comment</button>
+      </form>
+    </div>
+  );
+};
+
+export default index;
+
+```
