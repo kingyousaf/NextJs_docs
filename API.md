@@ -10,7 +10,7 @@
  - [Dynamic API Routes](#Dynamic-API-Routes)
  - [DELETE requests](#DELETE-requests)
  - [CATCH ALL routes](#CATCH-ALL-routes)
- - [APIS & Pre-rendering](#APIS-&-Pre-rendering)
+ - [APIS & Pre-rendering](#APIS-&-Pre--rendering)
 
 
 # Creating an api
