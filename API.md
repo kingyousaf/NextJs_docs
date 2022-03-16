@@ -6,6 +6,7 @@
 # Summary
  - [creating an api](#Creating-an-api)
  - [API GET request](#API-GET-request)
+ - [API POST request](#API-POST-request)
 
 
 # Creating an api
@@ -97,3 +98,81 @@ const index = () => {
 export default index;
 
  ```
+ 
+ 
+ # API-POST-request
+ 
+ ## What is a POST request
+ - When you want to send information to an api endpoint
+ 
+ ## How to make a POST request
+ code: 
+ 
+ ``` api/comments```
+ 
+ ```
+ import { comments } from "../../../data/comments";
+
+export default function handler(req, res) {
+  if (req.method === "GET") {
+    res.status(200).json(comments);
+  } else if (req.method === "POST") {
+    const comment = req.body.userComment;
+    const newComment = {
+      id: Date.now(),
+      text: comment,
+    };
+    comments.push(newComment);
+    res.status(201).json(newComment);
+  }
+}
+ ```
+ 
+ 
+```pages/comments```
+
+```
+import React, { useState } from "react";
+
+const index = () => {
+  const [comments, setComments] = useState([]);
+  const [userComment, setUserComment] = useState("");
+  const fetchComments = async () => {
+    const res = await fetch("/api/comments");
+    const data = await res.json();
+    setComments(data);
+  };
+  const submit = async (e) => {
+    e.preventDefault();
+    const response = await fetch("/api/comments", {
+      method: "POST",
+      body: JSON.stringify({ userComment }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+    const data = await response.json()
+    console.log(data)
+  };
+  return (
+    <div>
+      comments get <button onClick={fetchComments}> get comments</button>
+      {comments.map((comment) => (
+        <h1>{comment.text}</h1>
+      ))}
+      <form onSubmit={submit}>
+        <input
+          type="text"
+          placeholder="comment"
+          value={userComment}
+          onChange={(e) => setUserComment(e.target.value)}
+        />
+        <button type="submit">Submit comment</button>
+      </form>
+    </div>
+  );
+};
+
+export default index;
+
+```
