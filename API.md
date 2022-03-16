@@ -7,6 +7,7 @@
  - [creating an api](#Creating-an-api)
  - [API GET request](#API-GET-request)
  - [API POST request](#API-POST-request)
+ - [Dynamic API Routes](#Dynamic-API-Routes)
 
 
 # Creating an api
@@ -176,3 +177,29 @@ const index = () => {
 export default index;
 
 ```
+
+
+
+# Dynamic API Routes
+
+## What is a dynmaic api route
+- Use it for delete requests and finding or filtering 
+
+## How to make a dynmaic route
+
+- make a ```[commentId].js``` in ```comments``` add
+```
+import { comments } from "../../../data/comments";
+
+export default function handler(req, res) {
+  const { commentId } = req.query;
+  const comment = comments.find(
+    (comment) => comment.id === parseInt(commentId)
+  );
+  res.status(200).json(comment);
+}
+
+```
+
+## When to make a dynmaic route
+- For the example above to delete a specific comment by going to /commments/dynamciID then deleteing that
