@@ -9,6 +9,7 @@
  - [API POST request](#API-POST-request)
  - [Dynamic API Routes](#Dynamic-API-Routes)
  - [DELETE requests](#DELETE-requests)
+ - [CATCH ALL routes](#CATCH-ALL-routes)
 
 
 # Creating an api
@@ -296,3 +297,29 @@ const index = () => {
 export default index;
 
 ```
+
+
+
+
+# CATCH ALL routes
+
+## What is a catch all api route
+- For optional routes 
+- For one route to handle a single function or a adional 100 optional 
+
+## How to use a catch all route
+
+- make the file name ```[...params].js```
+
+```
+export default function handler(req,res) {
+    const params = req.query.params
+    res.status(200).json(params);
+    console.log(params)
+}
+```
+
+example output ```["jejje","ejej"]``` etc ```http://localhost:3000/api/jejje/ejej```
+
+## When to use a catch all route
+- For a single route then having a bunch of more optional api routes
